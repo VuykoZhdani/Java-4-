@@ -1,31 +1,28 @@
 package ua.lviv.iot;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-    public class Main  {
+
+public class Main  {
         public static void main(String [] args)
         {
-            Arena arena1=new Arena(40, 34.69);
-            Coliseum coliseum1=new Coliseum(56, 97);
-            Arena arena2=new Arena(20, 64.69);
-            Coliseum coliseum2=new Coliseum(76, 97);
-            Arena arena3=new Arena(41, 54.69);
-            Coliseum coliseum3=new Coliseum(26, 1007);
+            Stetoscop stetoscop1 =new Stetoscop(40, 34.69);
+            Voltmetr voltmetr1 =new Voltmetr(56, 97);
+            Stetoscop stetoscop2 =new Stetoscop(20, 64.69);
+            Voltmetr voltmetr2 =new Voltmetr(76, 97);
+            Stetoscop stetoscop3 =new Stetoscop(41, 54.69);
+            Voltmetr voltmetr3 =new Voltmetr(26, 1007);
 
-            Stadium[] chmo={
-                    arena1,coliseum1,arena2,coliseum2,arena3,coliseum3
+            Physics[] equipment={
+                    stetoscop1, voltmetr1, stetoscop2, voltmetr2, stetoscop3, voltmetr3
             };
-            Manager Manager=new Manager(chmo);
-            Manager.sortArraybyPeople();
-            Manager.printArray();
-            Manager.sortArraybyPower();
-            Manager.printArray();
-            Manager.sortArraybyPeopleR();
-            Manager.printArray();
-            Manager.sortArraybyPowerR();
-            Manager.printArray();
-            Manager.findUsingEnhancedForLoop(1007);
+            Compass Compass =new Compass(equipment);
+            Compass.sortArraybyPrice();
+            Compass.printArray();
+            Compass.sortArraybyWeight();
+            Compass.printArray();
+            Compass.sortArraybyPriceR();
+            Compass.printArray();
+            Compass.sortArraybyWeightR();
+            Compass.printArray();
+            Compass.findUsingEnhancedForLoop(1007);
         }
     }
 
